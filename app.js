@@ -24,10 +24,21 @@ app.get('/broadcast', ( res) => {
     res.send('<h1>broadcast to line</h1>')
 })
 
+app.get('/register', (req, res) => {
+    // let reply_token = req.body.events[0].replyToken
+    register(req.query.id)
+    res.send('<h1>broadcast to line</h1>')
+})
+
 app.listen(port)
 
+function register(id)
+{
+    userId = id
+    broadcast()
+}
 
-function broadcast(reply_token)
+function broadcast()
 {
     let headers = {
         'Content-Type': 'application/json',
