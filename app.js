@@ -20,14 +20,14 @@ app.post('/webhook', (req, res) => {
 
 app.get('/broadcast', ( res) => {
     // let reply_token = req.body.events[0].replyToken
-    broadcast(reply_token)
+    broadcast()
     res.sendStatus(200)
 })
 
 app.listen(port)
 
 
-function broadcast(reply_token)
+function broadcast()
 {
     let headers = {
         'Content-Type': 'application/json',
