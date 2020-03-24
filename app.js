@@ -21,7 +21,7 @@ app.post('/webhook', (req, res) => {
 app.get('/broadcast', ( res) => {
     // let reply_token = req.body.events[0].replyToken
     broadcast()
-    res.sendStatus(200)
+    res.send('broadcast to line')
 })
 
 app.listen(port)
