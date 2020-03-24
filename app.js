@@ -27,7 +27,7 @@ app.get('/broadcast', ( res) => {
 app.listen(port)
 
 
-function broadcast()
+function broadcast(reply_token)
 {
     let headers = {
         'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ function broadcast()
         },
         {
             type: 'text',
-            text: 'How are you?'
+            text: 'This is broadcast text.'
         }]
     })
     request.post({
